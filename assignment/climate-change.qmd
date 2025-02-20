@@ -83,8 +83,8 @@ Describe the data set to the best of your ability, given the documentation provi
 
 **Answer 3:**
 The data is from NASA's Goddard Institute for Space Studies
-The classes for the column are numeric/integer. 
-Global temperature is the average temperature of the entire Earth's surface over a period of time.Global temperature anomaly is the deviation from a long-term average temperature over time.
+The classes for the column are numeric/integer and measured in years.
+Global temperature is the average temperature of the entire Earth's surface over a period of time. Global temperature anomaly is the deviation from a long-term average temperature over time.
 
 **Question 4:**
 
@@ -93,6 +93,13 @@ Construct the necessary R code to import and prepare for plotting the following 
 You'll need to determine the file's delimiter and any comments or skips. You will also need to be sure that you have column names. You will not directly use the code above to read the CO2 data, but that code provides helpful tips for reading the data.
 
 **Answer 4:**
+```{r}
+temp_data <- read_table("https://data.giss.nasa.gov/gistemp/graphs/graph_data/Global_Mean_Estimates_based_on_Land_and_Ocean_Data/graph.txt",
+                        skip = 5,
+                        col_names = c("Year", "No_Smoothing", "Lowess_Smoothing")) 
+
+head(temp_data)
+```
 
 **Question 5:**
 
