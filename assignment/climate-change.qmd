@@ -106,6 +106,19 @@ head(temp_data)
 Plot the trend in global mean temperatures over time.  Describe what you see in the plot and how you interpret the patterns you observe.
 
 **Answer 5:**
+```{r}
+ggplot(temp_data, aes(x = Year)) +
+  geom_line(aes(y = No_Smoothing, color = "No Smoothing"), linewidth = 1) +
+  geom_line(aes(y = Lowess_Smoothing, color = "Lowess Smoothing"), linewidth = 1, linetype = "dashed") +
+  labs(title = "Global Mean Temperature Trends",
+       x = "Year",
+       y = "Temperature Anomaly (°C)",
+       color = "Legend") +
+  theme_minimal()
+
+```
+According to the plot, there is an upwards trend for the global mean temps overtime for both Lowess Smoothing and No Smoothing. The No Smoothing line more likely fluctuates becuase of natural variability such as natural occurrences like El Niño.
+The Lowess Smoothing line shows a long-term warming trend which makes it easier to see a constant increase.
 
 ## Evaluating the evidence for a "Pause" in warming?
 
