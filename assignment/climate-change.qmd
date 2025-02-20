@@ -165,7 +165,18 @@ temp_data <- temp_data |>
 Plot the different averages on the *same plot* and describe what differences you see and why.  
 
 **Answer 8:**
-
+```{r}
+ggplot(temp_data, aes(x = Year)) +
+  geom_line(aes(y = avg_5yr, color = "5-Year Average"), size = 1) +
+  geom_line(aes(y = avg_10yr, color = "10-Year Average"), size = 1) +
+  geom_line(aes(y = avg_20yr, color = "20-Year Average"), size = 1) +
+  labs(title = "Global Temperature Anomalies with Averages",
+       x = "Year",
+       y = "Temperature Anomaly (°C)",
+       color = "Legend") +
+  theme_minimal()
+```
+According to the graph, I can see that the 5-year average has more peaks which shows more short-term fluctuations. For the 10-year average, the short-term fluctuations are less visible compared to the 5-year average which makes the long-term warming trend more evident. For the 20-year average, I believe gives us the smoothest trend line that shows us the overall direction of global warming.
 **Question 9:**
 
 By examining the data here, what evidence do you find or not find for such a pause? 
