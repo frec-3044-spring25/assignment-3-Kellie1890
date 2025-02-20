@@ -44,13 +44,26 @@ ggplot(co2, aes(x = decimal_date, y = monthly_average)) +
 Describe the overall trend in the CO2 data.
 
 **Answer 1:**
-In the graph it shows that the overall trend in the CO2 data that it goes into a positive slope
+In the graph it shows that the overall trend in the CO2 data that it goes into a positive slope which means there is a steady increase in CO2 over time.
 **Question 2:**
+```{r}
+co2_seasonal <- co2 |>
+  group_by(month) |>
+  summarize(mean_co2 = mean(monthly_average, na.rm = TRUE))
+
+# Plot seasonal variation
+ggplot(co2_seasonal, aes(x = month, y = mean_co2)) +
+  geom_line(color = "blue") +
+  geom_point(size = 2) +
+  labs(x = "Month", y = "Average CO2 Concentration (ppm)", 
+       title = "Seasonal CO2 Variation") +
+  theme_minimal()
+```
 
 How does CO2 vary within a year?  What month is it at max?  Min?  What might explain this sub-annual pattern? (you will need to write code and make a plot to answer this question)
 
 **Answer 2:**
-
+According to the graph, the CO2 concentration is at a higher level the significantly decreases during the spring and summer seasons. The month at max is May. The month at minimum is September. This sub-annual pattern could be explained by there being more plants alive during spring and summer seasons since they can absorb CO2 with photosynthesis.
 
 
 ## Global Temperature Data
