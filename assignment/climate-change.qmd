@@ -148,6 +148,17 @@ temp_data <- temp_data |>
 - Create a data frame from the annual temperature anomaly data (from Question 4) with three new columns: 5-year running averages, 10-year running averages, and 20-year running averages.
 
 **Answer 7:**
+The meaning of 5 year average is the average value calculated by taking the sum of data points from the past five years and dividing that sum by five.
+The meaning of annual average is  the average value of something over the course of a year.
+```{r}
+temp_data <- temp_data |>
+  mutate(
+    avg_5yr  = rollmean(No_Smoothing, k = 5, fill = NA, align = "right"),
+    avg_10yr = rollmean(No_Smoothing, k = 10, fill = NA, align = "right"),
+    avg_20yr = rollmean(No_Smoothing, k = 20, fill = NA, align = "right")
+  )
+```
+
 
 **Question 8:**
 
