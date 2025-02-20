@@ -65,7 +65,6 @@ How does CO2 vary within a year?  What month is it at max?  Min?  What might exp
 **Answer 2:**
 According to the graph, the CO2 concentration is at a higher level the significantly decreases during the spring and summer seasons. The month at max is May. The month at minimum is September. This sub-annual pattern could be explained by there being more plants alive during spring and summer seasons since they can absorb CO2 with photosynthesis.
 
-
 ## Global Temperature Data
 
 Current climate change affects many aspects of the environment, with socio-economic consequences. For example, a warmer climate can allow new diseases to be introduced and persist (e.g., West Nile became established in the United States after an unusually warm winter, which allowed the mosquitoes that carry the virus to survive and spread). We are concerned not only with the actual temperature but also with the rate at which it changes. Rapid changes make it more likely that species cannot adapt and will go extinct. 
@@ -83,7 +82,9 @@ Describe the data set to the best of your ability, given the documentation provi
 - What is the difference between "global temperature" and "global temperature anomaly"? 
 
 **Answer 3:**
-
+The data is from NASA's Goddard Institute for Space Studies
+The classes for the column are numeric/integer. 
+Global temperature is the average temperature of the entire Earth's surface over a period of time.Global temperature anomaly is the deviation from a long-term average temperature over time.
 
 **Question 4:**
 
