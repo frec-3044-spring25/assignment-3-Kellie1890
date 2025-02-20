@@ -131,6 +131,10 @@ You will use rolling averages to help you explore the evidence for a pause. Sinc
 Use a search engine (e.g., Google) or a chat LLM to find out how to calculate a rolling average in R. What search term or chat LLM prompt did you use?  What website or answer from the chat LLM did you end up using?  How much did you need to modify the code from the website or chat LLM to answer the question successfully?
 
 **Answer 6:**
+I googled 'how to calculate a rolling average' and one of the top sources was stackoverflow so that is what I ended up using. I overall ended up using code from multiple sources to see which one worked in the end.
+```{r}
+
+```
 
 **Question 7:**
 
